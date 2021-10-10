@@ -1,14 +1,13 @@
 ---
-title: "Sub Page of Test"
-metaTitle: "This is the subpage of test"
-metaDescription: "This is the subpage of test"
+title: "Intro"
+metaTitle: "Intro to AWS Practitioner Certification docs."
+metaDescription: "Intro to AWS Practitioner Certification docs."
 ---
 
-This is a test
+The following is a code block with JavaScript language syntax highlighting.
 
 ```javascript
 import React from 'react';
-const test = "test"
 ```
 
 Supports multiple languages.

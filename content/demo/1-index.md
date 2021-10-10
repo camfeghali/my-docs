@@ -1,13 +1,14 @@
 ---
-title: "Sub Page"
-metaTitle: "Syntax Highlighting is the meta title tag for this page"
-metaDescription: "This is the meta description for this page"
+title: "Sub Page of Demo"
+metaTitle: "This is the subpage of demo"
+metaDescription: "This is the subpage of demo"
 ---
 
-The following is a code block with JavaScript language syntax highlighting.
+This is a demo page to remind me of what I can do :)
 
 ```javascript
 import React from 'react';
+const test = "test"
 ```
 
 Supports multiple languages.
