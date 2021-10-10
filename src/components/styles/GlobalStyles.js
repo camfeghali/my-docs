@@ -257,7 +257,7 @@ export const baseStyles = css`
     padding: 0 !important;
   }
   .navBarDefault {
-    background-color: #001934;
+    background-color: #f59b42;
     border-radius: 0;
     border-top: 0;
     margin-bottom: 0;
@@ -277,7 +277,7 @@ export const baseStyles = css`
     min-width: 335px;
     padding-right: 20px;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
   .navBarBrand {
     padding: 0px 0px;
@@ -610,7 +610,7 @@ export const baseStyles = css`
 
   /* Image styling */
   img {
-    max-width: 100%;
+    max-width: 60%;
   }
   /* end image */
   .githubBtn {
@@ -874,7 +874,7 @@ export const baseStyles = css`
     }
     .navBarHeader {
       min-width: 240px;
-      flex: initial;
+      flex: auto;
     }
     .githubBtn {
       padding: 10px 10px;
