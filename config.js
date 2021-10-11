@@ -39,10 +39,10 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
-      '/codeblock',
+      '/aws-practitioner',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+      '/aws-practitioner/intro', // add trailing slash if enabled above
     ],
     links: [],
     frontline: false,

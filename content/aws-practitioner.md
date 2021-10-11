@@ -3,24 +3,20 @@ title: "AWS - Practitioner"
 metaTitle: "AWS Practitioner Certification docs."
 metaDescription: "AWS Practitioner Certification docs."
 ---
+AWS CCP [whitepaper](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/aws-overview.pdf).
 
-The following is a code block with JavaScript language syntax highlighting.
+Find A Cloud Guru's table of content [here](https://acloudguru.visme.co/view/mxz10wwn-s01-l00-table-of-contents).
 
-```javascript
-import React from 'react';
-```
+The Certified Cloud Practitioner exam validates the ability to:
 
-Supports multiple languages.
+* Explain the value of the AWS cloud.
+* Understand and explain the AWS shared responsibility model.
+* Understand AWS Cloud security best practices.
+* Understand AWS Cloud **costs, economics and billing practices.**
+* Describe and position the core AWS services, including **compute, network, databases and storage.**
+* Identify AWS services for common use cases
 
-The following is a code block with diff. Lines with `+` highlighted in green shade indicating an addition. Lines with `-` highlighted in red shade indicating a deletion.
+There are two types of questions on the exam:
 
-```javascript
-- const data = ['1','2'];
-+ const data = [1,2];
-```
-
-## Live Editing example
-
-```javascript react-live=true
-<button className={'btn btn-default'}>Change my text</button>
-```
+* **Multiple choice**: Has one correct response and three incorrect responses.
+* **Multiple response:** Has two or more correct responses out of five or more options.
