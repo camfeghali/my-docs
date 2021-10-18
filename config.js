@@ -40,6 +40,7 @@ const config = {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
       '/aws-practitioner',
+      // '/aws-practitioner/compute-services',
     ],
     collapsedNav: [
       '/aws-practitioner/intro', // add trailing slash if enabled above

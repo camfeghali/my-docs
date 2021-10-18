@@ -94,7 +94,7 @@ const SidebarLayout = ({ location }) => (
   <StaticQuery
     query={graphql`
       query {
-        allMdx {
+        allMdx (sort: {fields: slug}){
           edges {
             node {
               fields {
@@ -107,6 +107,7 @@ const SidebarLayout = ({ location }) => (
       }
     `}
     render={({ allMdx }) => {
+      console.log({allMdx})
       return (
         <Sidebar>
           {config.sidebar.title ? (
