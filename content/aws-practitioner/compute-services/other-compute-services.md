@@ -34,8 +34,8 @@ Allows you to run cloud services in your **internal data center**.
 
 ## AWS Batch
 
-Allows you to process large workloads in smalles chunks (or batches).
+Allows you to process large workloads in smaller chunks (or batches).
 
-* Runs hundreds / thousands of smalles **batch processing** jobs.
+* Runs hundreds / thousands of smaller **batch processing** jobs.
 * **Dynamically** provisions instances based on volumes.
 
