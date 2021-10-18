@@ -8,3 +8,7 @@ metaDescription: "Compute services. Their features, use cases and pricing models
 
 * **Elastic Cloud Compute (EC2)**
 * **Lambda**
+* **Fargate**
+* **LightSail**
+* **Outposts**
+* **Batch**
