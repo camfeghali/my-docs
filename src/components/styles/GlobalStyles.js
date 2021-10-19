@@ -50,6 +50,9 @@ export const baseStyles = css`
     position: relative;
     padding-bottom: 56.2%;
   }
+  .gatsby-resp-image-image {
+    min-width: 100%;
+  }
   a {
     text-decoration: none;
   }
