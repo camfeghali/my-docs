@@ -6,6 +6,10 @@ metaDescription: 'Security & Compliance for the  AWS Practitioner Certification 
 
 The following docs cover the **Security & Compliance** section of the exam.
 
-- **Security & Compliance | 25%**, covers:
+- **Security & Compliance | 26%**, covers:
 
-  - Compute services.
+  - Shared Responsibility Model.
+  - Well Architected Framework.
+  - IAM Users and Permissions.
+  - Security Services.
+  - Data Encryption and Secrets Management.
