@@ -8,7 +8,7 @@ metaDescription: 'Data Encryption and Secrets Management Services to know for th
 
 **Data at Rest** = Data that is stored for later use.
 
-![Encryption diagram](../../encryption-diagram.png)
+![Encryption diagram](../images/encryption-diagram.png)
 
 ## Key Management Service (KMS)
 

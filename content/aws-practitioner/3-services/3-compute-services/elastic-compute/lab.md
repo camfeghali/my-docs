@@ -12,7 +12,7 @@ In this lab, we will build the following infrastructure.
 4. Configure **Internet Gateway**.
 5. Launch an **EC2** in a security group.
 
-![EC2 in a VPC lab diagram](../../../ec2-vpc-lab-diagram.png)
+![EC2 in a VPC lab diagram](../../../images/ec2-vpc-lab-diagram.png)
 
 ## Create VPC
 

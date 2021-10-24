@@ -6,7 +6,7 @@ metaDescription: 'Messaging and Integration Services. Their features, use cases 
 
 **Coupling** refers to the **interdependencies** between components of a system. **Loose coupling** helps reduce the risk of cascading failures between components.
 
-![tight-vs-loose-coupled-systems](../tight-vs-loose-coupled-systems.png)
+![tight-vs-loose-coupled-systems](../images/tight-vs-loose-coupled-systems.png)
 
 **Queues are used to implement loosely coupled systems**.
 
@@ -26,7 +26,7 @@ metaDescription: 'Messaging and Integration Services. Their features, use cases 
 
   - A money transfer can be built in a loosely coupled manner to handle millions of requests without blocking user interaction.
 
-![SQS use case](../sqs-use-case.png)
+![SQS use case](../images/sqs-use-case.png)
 
 ## Simple Notification Service (SNS)
 

@@ -15,7 +15,7 @@ Networking is the connection of computers together to allow sharing of data betw
 - Isolate and protect resources.
 - A VPC spans AZs in a single region
 
-![VPC diagram](../vpc-diagram.png)
+![VPC diagram](../images/vpc-diagram.png)
 
 A **subnet** allows you to split the network inside your VPC. It's where you launch your instances like EC2.
 
@@ -31,7 +31,7 @@ The **public** subnet is where you would store resources you would want to be ac
 
 Is used to connect **2 VPC**s via AWS's private network to make them behave as one.
 
-![VPC-peering diagram](../vpc-peering.png)
+![VPC-peering diagram](../images/vpc-peering.png)
 
 ## Route 53
 
@@ -65,4 +65,4 @@ The **DNS** is the **Domain Name System** which is responsible for resolving a d
 - **Use cases:**
   - Moving applications to the cloud.
 
-![Site-to-Site VPN](../site-to-site-vpn.png)
+![Site-to-Site VPN](../images/site-to-site-vpn.png)

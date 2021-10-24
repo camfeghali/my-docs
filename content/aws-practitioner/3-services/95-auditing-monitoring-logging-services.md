@@ -26,7 +26,7 @@ We can use these services to answer questions like:
 
 Allows you to set alarms like a **billing alarm** to monitor your estimate AWS charges
 
-![Screen Shot 2021-10-22 at 12.02.51 PM](../cloudwatch-alarm.png)
+![Screen Shot 2021-10-22 at 12.02.51 PM](../images/cloudwatch-alarm.png)
 
 ### CloudWatch logs
 

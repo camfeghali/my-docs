@@ -65,7 +65,7 @@ To use the AWS CLI, users need **access keys**, and those are generated using **
 
 The **public key** lives on the resource and the **private key** on the user's machine. That will allow users with the correct **private** key to access our provisioned resources.
 
-![Access Keys diagram](../../access-key-diagram.png)
+![Access Keys diagram](../images/access-key-diagram.png)
 
 ## Groups
 

@@ -6,7 +6,7 @@ metaDescription: 'Create Users and Manage Permissions using Groups and Policies 
 
 We will use **IAM** to create a **User Group,** place users in that group, then **assign permissions to that group using a custom policy**.
 
-![Group Policy Diagram](../../../group-policy-diagram.png)
+![Group Policy Diagram](../../images/group-policy-diagram.png)
 
 ## Create our custom Policy
 
