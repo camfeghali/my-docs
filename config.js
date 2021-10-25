@@ -43,7 +43,7 @@ const config = {
       // '/aws-practitioner/compute-services',
     ],
     collapsedNav: [
-      '/aws-practitioner/intro', // add trailing slash if enabled above
+      '/1-aws-practitioner', // add trailing slash if enabled above
     ],
     links: [],
     frontline: false,

@@ -111,7 +111,6 @@ const calculateTreeData = edges => {
     if (prevItems.length) {
       accu.items.unshift(prevItems.splice(index, 1)[0]);
     }
-    console.log({accu})
     return accu;
   }, tree);
 };
