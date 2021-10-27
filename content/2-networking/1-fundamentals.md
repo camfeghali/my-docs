@@ -24,6 +24,46 @@ It is used to lay out basic standards and rules for **different devices from dif
 
 **Data packet** = An all encompassing term that represents any single set of binary data being sent across a network link.
 
+## Devices
+
+### Cables
+
+Allow you to do point to point networking connection.
+
+### Hubs (not used anymore)
+
+It's a **physical layer device** that allows for connection from many computers at once.
+
+All the devices connected to a HUB will end up talking to all other devices at the same time. **It's up to each system connected to the hub to determine if the incoming data is intended to them or to ignore it if it isn't**.
+
+This creates a lot of noise on the network and creates a **collision domain**. A collision domain is a network segment where only one device can communicate at a time. **If multiple systems try sending data at the same time, the electrical pulses sent across the cable can interfere with each other.** This causes the connected computers to wait for a quiet period before they try sending their data again.
+
+**This really slows down network communication.**
+
+(**That's why Hubs are mainly a historical artifact at this point**).
+
+### Switch
+
+Is very similar to a Hub since you can connect many devices to it. But contrary to a hub which is a **layer 1** device, a switch is a **layer 2** device.
+
+This means that a switch can inspect the content of the **Ethernet frame** and determine to which **MAC Address** the data is intended for, and send it to that computer.
+
+### Router
+
+While **Hubs** and **Switches** are used to connect computers on a single network, ususally referred to as a **LAN**, we often want to send and receive data to computers on another network.
+
+A **router** is a device that knows how to **forward** data between **independent networks**. It operates at **Layer 3**. Routers can inspect **IP datagrams** to determine where to send things.
+
+**Routers store internal tables containing information on how to route traffic between lots of different networks all over the world.**
+
+The most common types of routers you'll see are **home routers** or **small office routers**. These routers do not have very detailed routing tables. Their purpose is to **take traffic originating from devices on your LAN and forward it to the ISP.**
+
+![Home Routers](./images/home-routers.png)
+
+Once traffic is at the ISP, a more sophisticated router determines where to send the data called a **core router**.
+
+Not only are **Core ISP routers** connected to many other routers, they share data with each other via the **Border Gateway Protocol (BGP)**. Which is also how they learn to send traffic along the most optimal path.
+
 ## Ethernet
 
 The primary purpose of this layer is to **abstract away** the need for any other layers **to care about the physical layer** and **what hardware** is being used.
