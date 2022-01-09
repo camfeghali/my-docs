@@ -66,7 +66,7 @@ Once traffic is at the ISP, a more sophisticated router determines where to send
 
 Not only are **Core ISP routers** connected to many other routers, they share data with each other via the **Border Gateway Protocol (BGP)**. Which is also how they learn to send traffic along the most optimal path.
 
-## Ethernet
+## Data Link Layer | Ethernet
 
 The primary purpose of this layer is to **abstract away** the need for any other layers **to care about the physical layer** and **what hardware** is being used.
 
@@ -90,13 +90,11 @@ This way, network interfaces at the physical layer can convert a stream of bits 
 - **Payload**: The actual data being transported.
 - **Frame Check Sequence (FCS)**: Checksum value for the entire frame.
 
-## Internet Protocol
+## Network Layer | IP
 
 On a **Local Area Network (LAN)**, nodes can communicate with each other through their physical MAC addresses because switches can learn the MAC addresses connected to each of their port to forward transmissions appropriately.
 
 But that doesn't scale well. There is **no way of knowing where in the world a specific MAC address will be at any point of time** .
-
-**Adress Resolution Protocol (ARP)**, which is how nodes learn about each other's MAC addresses on a network, is not translatable to anything besides a single network segment.
 
 **In come the Network Layer and the IP Protocol**.
 
@@ -145,11 +143,16 @@ This means that IP addresses are more hierarchical and easier to store data abou
 - **Padding**: A series of 0s used to ensure the header is the correct total size.
 
 
-## Network Classes
+### Network Classes
 
 **Public IPs are handled by large organizations and they assign out blocks of IPs based on geographic regions**.
 
 ![Network Classes](./images/network-classes.png)
+
+### Adress Resolution Protocol (ARP), 
+Is a protocol used to discover the hardware address of a device with a certain IP address.
+
+Almost all network connected devices will retain a **local ARP table (A list of IP addresses and the MAC address associated with them)**.
 
 ### IPv6
 
@@ -163,9 +166,19 @@ This means that IP addresses are more hierarchical and easier to store data abou
 
 This allows you to have your **private local area network (LAN)** with 10 devices on it, each with its **own IP address on the LAN**, and your **ISP (Internet Service Provider)** provides you with your own single **Public IP**, so that when different computers connect to your computer, they **first connect to your public IP** and **Network Address Translation (NAT) routes the traffic to the correct device.**
 
+## Transport Layer | TCP / UDP
+
+One of the main responsibilities of the transport layer is to multiplex and demultiplex network traffic, establishing long running connections, and insuring data integrity through error checking and data verification.
+
+### Multiplexing / Demultiplexing
+**Multiplexing:** Means that nodes on a network have the ability to direct traffic towards many different receiving services.
+**Demultiplexing:** Takes traffic directed to the same node and delivering it to the proper receiving service.
+
+** The transport layer handles multiplexing and demultiplexing through ports**.
+
 ### Network Port
 
-A **Network Port** is associated with IP address and **identifies an application or service running on a networked device**.
+A **Network Port** is associated with IP address and it's a 16 bit number used to **identify an application or service running on a networked device**.
 
 - The first 1023 ports are reserved for well-known services like
   - **SMTP**: port 25
@@ -173,14 +186,21 @@ A **Network Port** is associated with IP address and **identifies an application
   - **HTTP**: port 80
   - **HTTPS**: port 443
 
-### Subnetting
+![Port Multiplexing / Demultiplexing](./images/tcp-multiplexing-demultiplexing.png)
 
-**Subnetting** is dividing a network into smaller networks.
+### TCP Segment Header
+![TCP Segment Header](./images/tcp-segment-header.png)
 
-We use a **subnet mask** to define which part of the **IP address** is used for the **network ID** and which part is used for the **host**.
+- **Destination Port**: The port of the service the traffic is intended for.
+- **Source Port**: An ephemeral port used to send traffic from source device.
+- **Sequence Number**: Used to keep track of the order the segments need to be reconstructed to.
+- **Acknowledgement Number**: The number of the next expected segment.
+- **Header Length**: Used to determine where the payload starts.
+- **Control Flags**: Used to establish tcp handshake.
+- **Window**: Specifies the range of sequence numbers that might be sent  before an acknowledgement is required.
+- **Checksum**: Used to make sure there was no data lost or corrupted along the way.
+- **Urgent**: Used to point oout segments that are more important tha others.
+- **Options**: Used for flow control protocols.
+- **Padding**: Used to ensure the payload starts at the expected location.
 
-#### Reasons for Subnetting
 
-- Small networks are easier to manage than large networks.
-- You get a better allocation of IP addresses in a limited range.
-- With smaller networks you get better network performance.
