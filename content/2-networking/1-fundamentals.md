@@ -24,6 +24,8 @@ It is used to lay out basic standards and rules for **different devices from dif
 
 **Data packet** = An all encompassing term that represents any single set of binary data being sent across a network link.
 
+![Network Data Encapsulation](./images/network-data-encapsulation.png)
+
 ## Devices
 
 ### Cables
@@ -98,33 +100,56 @@ But that doesn't scale well. There is **no way of knowing where in the world a s
 
 **In come the Network Layer and the IP Protocol**.
 
-## IP Addressing
 
-An IP address is a unique number that identifies a computer on a network.
+**IP addresses** are comprised of four octets, and each octect is described in decimal numbers.
 
-**192.168.2.14:80** is composed of
+8 bits of data can represents all numbers from 0 to 255.
 
-- Network portion,
-- Host portion,
-- Port.
+IP addresses are distributed in large sections to various organizations and companies instead of being determined by manufacturers.
 
-### IPv4
+This means that IP addresses are more hierarchical and easier to store data about than MAC addresses.
 
-**IPv4** was created in the 80's it is a **32 bit address**.
+**IBM owns every single IP which has the number 9 as the first octet.** Which means that if an internet router needs to send data to the IP `9.0.0.1`, all it has to do is move it to one of IBM's routers, and that router takes care of the rest of the delivery process.
 
-Ex: **192.168.2.14** is composed of 4 sections, each 8 bits
+**IP addresses belong to networks, and not devices!** That means your laptop has a different IP assigned to it everytime it connects to a new LAN, and sometimes a different IP on the same LAN (**thanks to DHCP**).
 
-There are ~4.3 billion addresses.
+### Dynamic Host Configuratioon Protocol (DHCP)
 
-Because there are so many devices on the network, **IPv4 addresses** are running out.
+**DHCP** is the protocol that assigns a device an IP on a network. It is handed out by a **DHCP service ** that lives on the network.
 
-Let's take a look at **192.168.2.14:80**
+**IP addresses assigned through DHCP are known as dynamic IPs.**
 
-- The first 3 octets are the **network ID**
-  - Tells the router **which network** to send the data to.
-- The 4th octet identifies the particular **device** on the **network ID**
-  - Tells the router which device on the network.
-- :80 represents the port on the target device.
+**Another type of IP address are static IPs, which are configured on a node manually.**
+
+**Static IPs are mostly reserved for servers and Dynamic IPs for clients**.
+
+
+### IP Datagram
+#### Datagram Header
+
+![IP Datagram header](./images/ip-datagram-header.png)
+
+- **Version**: IPV4 or IPV6.
+- **Header Length**: Almost always 20 bytes in length for IPV4.
+- **Service Type**: Used to specify quality of service, i.e: will tell how important the datagram is, and will get priority.
+- **Total Length**: Defines total length of the datagram.
+- **Identification**: 16 bit number used to group messages together.
+- **Flags**: Used to indicate if a datagram is allowed to be fragmented or to indicate that the datagram has already been fragmented.
+- **Fragment Offset**: Process of taking a single datagram and splitting it up into several smaller datagrams.
+- **TTL**: Time to live, how many router hops a datagram can traverse before it is discarded. Used to avoiid endless loops if there is a routing misconfiguration.
+- **Protocol**: What transport layer protocol is being used (TCP / UDP).
+- **Header Checksum**: A checksum of the entire IP datagram header.
+- **Source IP Address**: IP address of source.
+- **Destination IP Address**: IP address of destination.
+- **Options**: Is an optional field used for testing purposes.
+- **Padding**: A series of 0s used to ensure the header is the correct total size.
+
+
+## Network Classes
+
+**Public IPs are handled by large organizations and they assign out blocks of IPs based on geographic regions**.
+
+![Network Classes](./images/network-classes.png)
 
 ### IPv6
 
@@ -147,12 +172,6 @@ A **Network Port** is associated with IP address and **identifies an application
   - **DNS** port 53
   - **HTTP**: port 80
   - **HTTPS**: port 443
-
-## Network Classes & Subnetting
-
-**Public IPs are handled by large organizations and they assign out blocks of IPs based on geographic regions**.
-
-![Network Classes](./images/network-classes.png)
 
 ### Subnetting
 
