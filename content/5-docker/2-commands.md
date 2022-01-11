@@ -10,6 +10,12 @@ metaDescription: 'List of docker commands, their use and flags'
 docker pull <image-name>:version
 ```
 
+# List images
+
+```
+docker images
+```
+
 # List running processes (container)
 
 ```
@@ -29,8 +35,9 @@ docker run --name <container-name> -p <server-port>:<container-port> -v <local-d
 ```
 
 - `-d` Used to run in detached mode (in the background)
-- `-v` Used to mount a volume from local inside the container
-- `ro` Used to define Read Only permissions for the container
+- `-v` Used to mount a volume from local inside the container.
+- `ro` Give Read Only permissions to the container on the volume.
+- `--rm` Used to remove a container when stopped. Will also removed anonymous volume created for it.
 
 # Stop container
 
@@ -42,4 +49,32 @@ docker stop <image-name>
 
 ```
 docker rm <container-name>
+```
+
+# List Volumes
+
+```
+docker volume ls
+```
+
+# Create volumes
+
+```
+docker volume create <volume-name>
+```
+
+## Delete unused volumes
+
+Will only delete volumes used by non-existant containers
+
+```
+docker volume prune
+```
+
+# Inspect
+
+## Inspect mounted volume
+
+```
+docker inspect <container-name> -f '{{ json .Mounts }}' | python -m json.tool
 ```
