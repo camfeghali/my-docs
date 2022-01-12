@@ -57,3 +57,27 @@ docker volume prune
 ```
 
 ## 5 - Back up & Restore volumes.
+
+Docker volume data is stored in protected space. So we need to be root.
+
+`sudo su -`
+
+To find where on the machine the volume data is stored, we use:
+
+```
+docker volume inspect <volume-name>
+```
+
+The location is found in the `Mountpoint` key.
+
+We us the tar linux utility to create a zipfile.
+
+```
+tar czf /tmp/website_$(date +%Y-%m-%d-%H-M).tgz -C <volume-data-path> .
+```
+
+To extract a backup:
+
+```
+tar xf <backup-path> <backup-destination>
+```

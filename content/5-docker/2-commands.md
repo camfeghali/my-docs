@@ -63,7 +63,7 @@ docker volume ls
 docker volume create <volume-name>
 ```
 
-## Delete unused volumes
+# Delete unused volumes
 
 Will only delete volumes used by non-existant containers
 
@@ -77,4 +77,22 @@ docker volume prune
 
 ```
 docker inspect <container-name> -f '{{ json .Mounts }}' | python -m json.tool
+```
+
+# List Networks
+
+```
+docker network ls
+```
+
+# Create Networks
+
+```
+docker network create <network-name>
+```
+
+# To run a container on a specific network
+
+```
+docker run -d --name <container-name> --network <network-name> <image-name>
 ```
