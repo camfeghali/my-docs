@@ -16,6 +16,12 @@ docker pull <image-name>:version
 docker images
 ```
 
+# Remove image
+
+```
+docker image rm <image-id>
+```
+
 # List running processes (container)
 
 ```
