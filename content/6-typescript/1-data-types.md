@@ -6,13 +6,13 @@ metaDescription: 'Typescript data types'
 
 ## Basic types
 
-* string
-* number
-* boolean
-* any
-* array
-* tuple
-* object
+- string
+- number
+- boolean
+- any
+- array
+- tuple
+- object
 
 ```
 // string
@@ -56,6 +56,7 @@ pid = 321;
 
 Enums are used to indicate to restrict the possible values of a given type.
 The enum values default to numeric values starting with 0, but can be changed like below.
+
 ```
 enum Direction {
 	Up = "Up",
@@ -64,12 +65,15 @@ enum Direction {
 	Right = "Right",
 }
 ```
+
 They can the be accessed like this:
+
 ```
 console.log(Direction.Up) // "Up"
 ```
 
 ## Type alias
+
 Type aliasing is the creation of your own types, for example:
 
 ```
@@ -80,9 +84,11 @@ type User = {
 ```
 
 ## Type Assertion
+
 Type assertion is explicitly telling the compiler that we want to treat an entity as a specific type.
 
 There are 2 syntaxes that we can use to assert a type.
+
 ```
 let cid: any = 1;
 let customerId = <number> cid; // 1st syntax
@@ -90,7 +96,9 @@ let alsoCusomterId = cid as number; // 2nd syntax
 ```
 
 ## Functions
+
 You can specify which type a function's parameter and return value are:
+
 ```
 function add(x: number, y: number): number {
 	return x + y;
@@ -104,5 +112,5 @@ function log(message: string | number): void {
 Finish: https://www.youtube.com/watch?v=BCg4U1FzODs&t=2576s
 
 ## Difference between a Interface and Type
+
 ## Generics
-## 

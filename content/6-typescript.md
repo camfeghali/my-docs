@@ -11,3 +11,4 @@ metaDescription: 'Typescript docs and cheat sheet'
 - Data Types
 - Enums
 - [Advanced](https://www.youtube.com/watch?v=eJ6R1knfsoc)
+- [Advanced](https://www.youtube.com/watch?v=TtDP6lpSjWc)
